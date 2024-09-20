@@ -18,6 +18,8 @@
 <script lang="js">
 import { defineComponent } from 'vue';
 
+import socket  from "../../socket";
+
 export default defineComponent({
   name: "Home",
   data() {
