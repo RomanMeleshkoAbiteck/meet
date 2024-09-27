@@ -9,5 +9,4 @@ const options = {
 
 const socket = io('http://localhost:7002', options);
 
-// module.exports = socket;
 export default socket;
