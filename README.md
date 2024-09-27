@@ -1,18 +1,21 @@
 # Meet
 
 ### This app is for video call for Abiteck company
+### Used technologies:
+#### Vite, Vue, Vuex, TypeScript, JavaScript, Bootstrap, Socket.io, WebRTC
 
-### __npm install:__
-![Alt-текст](./public/npm.png "Орк")
+### npm install:
+#### *npm install*
+
 
 ### __get up server:__
-![Alt-текст](./public/dev-server.png "Орк")
+#### *npm start:dev-server*
 
 ### __get up frontend:__
-![Alt-текст](./public/serve.png "Орк")
+#### *npm run server*
 
 ### __get build:__
-![Alt-текст](./public/build_2.png "Орк")
+#### *npm run build*
 ____
 
 ### Logo Company
