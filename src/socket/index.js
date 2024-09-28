@@ -7,6 +7,7 @@ const options = {
   transports : ["websocket"]
 }
 
-const socket = io('http://localhost:7002', options);
+// const socket = io('http://localhost:7002', options);
+const socket = io('http://meet.pp.ua', options);
 
 export default socket;
