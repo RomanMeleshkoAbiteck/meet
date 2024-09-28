@@ -34,6 +34,7 @@ export default  function Main() {
     <div ref={rootNode}>
         <p>Home page</p>
       <h1>Available Rooms</h1>
+      <p>meet.pp.ua</p>
 
       <ul>
         {rooms.map(roomID => (
