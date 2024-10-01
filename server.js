@@ -2,11 +2,29 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
+// -----------------Check----------------------------------
+const io = require('socket.io')(server, {
+     cors: {
+       origin: "https://meet.pp.ua", // Замените на ваш клиентский домен
+       methods: ["GET", "POST"],
+       allowedHeaders: ["my-custom-header"],
+       credentials: true
+     }
+   });
+
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://meet.pp.ua', // Замените на ваш домен
+  methods: ['GET', 'POST']
+}));
+
+// -------------------------------------------------------------
+
 const {version, validate} = require('uuid');
 
 const ACTIONS = require('./src/socket/actions');
 const PORT = process.env.PORT || 7002;
+console.log( "PORT - " + process.env.PORT );
 
 function getClientRooms() {
   const {rooms} = io.sockets.adapter;
