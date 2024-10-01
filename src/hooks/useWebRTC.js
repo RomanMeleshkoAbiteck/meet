@@ -63,7 +63,7 @@ export default function useWebRTC(roomID) {
         [
                 { urls: 'stun:stun.l.google.com:19302' },
                 {
-                  urls: 'relay1.expressturn.com:3478',
+                  urls: 'turn:relay1.expressturn.com:3478',
                   username: 'efY4OHU3CAJTSV09PS',
                   credential: 'Tqj2SczclzZ8ZjZD'
                 }
