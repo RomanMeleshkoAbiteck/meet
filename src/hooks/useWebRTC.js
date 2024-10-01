@@ -15,6 +15,21 @@ const ACTIONS = {
   SESSION_DESCRIPTION: 'session-description'
 };
 
+// const peerConnectionConfig = {
+//   iceServers: [
+//     ...freeice(),
+//     { urls: 'stun:stun.l.google.com:19302' },
+//     {
+//       urls: 'turn:your-turn-server.com',
+//       username: 'your-username',
+//       credential: 'your-credential'
+//     }
+//   ]
+// };
+
+// T6G3TSR99LJ81PURDZ9MRVT9
+
+
 export const LOCAL_VIDEO = 'LOCAL_VIDEO';
 
 
@@ -42,11 +57,23 @@ export default function useWebRTC(roomID) {
       if (peerID in peerConnections.current) {
         return console.warn(`Already connected to peer ${peerID}`);
       }
-
+      // -------------Check---------------------------------------
       peerConnections.current[peerID] = new RTCPeerConnection({
-        iceServers: freeice(),
+        iceServers: freeice(
+        [
+                { urls: 'stun:stun.l.google.com:19302' },
+                {
+                  urls: 'relay1.expressturn.com:3478',
+                  username: 'efY4OHU3CAJTSV09PS',
+                  credential: 'Tqj2SczclzZ8ZjZD'
+                }
+              ]
+        ),
       });
 
+      // peerConnections.current[peerID] = new RTCPeerConnection(peerConnectionConfig);
+
+      // ------------------------------------------------------------------------
       peerConnections.current[peerID].onicecandidate = event => {
         if (event.candidate) {
           socket.emit(ACTIONS.RELAY_ICE, {

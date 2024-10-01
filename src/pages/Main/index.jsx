@@ -35,6 +35,7 @@ export default  function Main() {
         <p>Home page</p>
       <h1>Available Rooms</h1>
       <p>meet.pp.ua</p>
+        <p>From STUR/TURN server</p>
 
       <ul>
         {rooms.map(roomID => (
