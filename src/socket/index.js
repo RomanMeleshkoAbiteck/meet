@@ -8,6 +8,6 @@ const options = {
 }
 
 // const socket = io('http://localhost:7002', options);
-const socket = io('https://meet.pp.ua', options);
+const socket = io('https://meet.pp.ua:7002', options);
 
 export default socket;
