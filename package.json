@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "author": "Meleshko Roman (Abiteck)",
-  "proxy": "https://meet.pp.ua",
+  "proxy": "https://meet.pp.ua:7002",
   "scripts": {
     "start:dev-server": "npx nodemon server.js",
     "start:dev": "vite --port 7001 --host",
