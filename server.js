@@ -7,8 +7,8 @@ const io = require('socket.io')(server, {
      cors: {
        origin: "https://meet.pp.ua", // Замените на ваш клиентский домен
        methods: ["GET", "POST"],
-       allowedHeaders: ["my-custom-header"],
-       credentials: true
+       // allowedHeaders: ["my-custom-header"],
+       // credentials: true
      }
    });
 
