@@ -36,7 +36,7 @@ export default  function Main() {
       <h1>Available Rooms</h1>
       <p>meet.pp.ua</p>
         <p>Set socket by meet.pp.ua</p>
-        <p>else if</p>
+        <p>I can not connnected!!!</p>
 
       <ul>
         {rooms.map(roomID => (
