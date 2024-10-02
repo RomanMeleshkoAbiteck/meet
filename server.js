@@ -12,11 +12,11 @@ const io = require('socket.io')(server, {
      }
    });
 
-const cors = require('cors');
-app.use(cors({
-  origin: 'https://meet.pp.ua', // Замените на ваш домен
-  methods: ['GET', 'POST']
-}));
+// const cors = require('cors');
+// app.use(cors({
+//   origin: 'https://meet.pp.ua', // Замените на ваш домен
+//   methods: ['GET', 'POST']
+// }));
 
 // -------------------------------------------------------------
 
