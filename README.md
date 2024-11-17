@@ -1,27 +1,5 @@
-# Meet
+# Vue 3 + Vite
 
-### This app is for video call for Abiteck company
-### Used technologies:
-#### Vite, React, Redux, JavaScript, Bootstrap, Socket.io, WebRTC
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-### npm install:
-#### *npm install*
-
-
-### __get up server:__
-#### *npm start:dev-server*
-
-### __get up frontend:__
-#### *npm run start:dev*
-
-### __get build:__
-#### *npm run build*
-____
-
-### Logo Company
-
-![Alt-текст](./public/video.png "Орк")
-
-
-
-
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
