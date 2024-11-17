@@ -1,18 +1,18 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [vue()],
   resolve: {
     alias: {
       components: "/src/components",
       directives: "/src/directives",
       models: "/src/models",
+      store: "/src/store",
       assets: "/src/assets",
       scss: "/src/scss",
-      pages: "/src/pages",
-      socket: "/src/socket"
+      views: "/src/views"
     }
   }
 })

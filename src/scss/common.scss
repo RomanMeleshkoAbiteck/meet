@@ -1,0 +1,602 @@
+#sipClient {
+  background-color: #ECEDED;
+  font-size: 13px;
+  line-height: 1.42857143;
+  /* firefox 19+ */
+  /* ie */
+}
+#sipClient p {
+  margin: 0;
+  padding: 0px 0 10px 0;
+  line-height: 18px;
+}
+
+#sipClient #txtCallStatus {
+  color: #333;
+}
+#sipClient #sip-dialpad {
+  width: 292px;
+  padding: 36px 20px;
+  //margin-top: 50px;
+}
+#sipClient #sip-dialpad .col-xs-4 {
+  text-align: center;
+}
+#sipClient .digit {
+  height: 66px;
+  width: 66px;
+  margin: 0 8px 14px !important;
+  background-color: #f8f8f8;
+  font-weight: 300;
+  font-size: 24px;
+  border-radius: 100px;
+  line-height: 21px;
+  padding-top: 9px;
+  float: left;
+}
+#sipClient .digit span {
+  display: block;
+  color: #999;
+  font-size: 10px;
+  font-weight: normal;
+}
+#sipClient .sip-panel h3 {
+  margin-top: 22px;
+}
+#sipClient #sip-splash {
+  height: 371px;
+}
+#sipClient #sip-splash .fa {
+  margin-bottom: 15px;
+}
+#sipClient #sip-splash .fa-circle {
+  color: #5cb85c;
+}
+#sipClient #sip-log .panel-heading {
+  padding: 10px 8px;
+  background: #ECEDED;
+
+}
+#sipClient #sip-logitems {
+  padding: 20px;
+  height: 70vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: #ECEDED;
+  border: none;
+  box-shadow: none;
+  position: relative;
+
+  .pull-right {
+    display: none;
+  }
+}
+#sipClient #sldVolume {
+  width: 140px;
+  margin: 0 auto;
+  box-shadow: none;
+}
+#sipClient .sip-logitem {
+  padding: 8px;
+  border-radius: 15px;
+  position: relative;
+}
+
+/*----------------------  Roman Meleshko ------------------------------*/
+
+body {
+  overflow: hidden;
+}
+
+#phoneUI {
+  padding: 15px;
+}
+
+/*---------- Styles for Status---------- */
+#sipClient .sipStatus {
+  margin: 10px 0px 15px;
+  padding: 15px 25px;
+  background-color: #e3d5ca;
+  color: #333;
+  border-radius: 20px;
+}
+
+.sipStatus {
+    display: flex;
+    justify-content: space-between;
+
+    #txtCallStatus {
+      order: 1;
+    }
+
+    #txtRegStatus {
+      order: 0;
+    }
+  }
+
+
+/* ---------Styles for call_page--------- */
+//.container {
+//  position: fixed;
+//}
+
+#numDisplay {
+  padding: 10px;
+  box-shadow: none;
+  font-size: 25px;
+  background: #ECEDED;
+}
+
+.input-group {
+  display: block !important;
+}
+
+.form-control {
+  border-style: none none solid none;
+  border-width: 0 0 1px 0;
+  border-radius: 0px;
+}
+
+.btn-call .volume {
+  border: none;
+  background: #ffffff;
+  color: #333;
+  border-radius: 50%;
+  width: 66px;
+  height: 66px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.btn-call .deleteNum {
+  position: relative;
+  border: none;
+  background: #ffffff;
+  color: #333;
+  border-radius: 50%;
+  width: 66px;
+  height: 66px;
+  right: 5px;
+  font-size: 20px;
+}
+
+.btn-call .btnCall {
+  border: none;
+  border-radius: 50%;
+  width: 66px;
+  height: 66px;
+  margin-left: 5px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.btn-call {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+#call_block {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: #dee2e6;
+  position: absolute;
+  color: white;
+  display: none;
+  overflow-x: scroll;
+  border-radius: 20px;
+}
+
+.dropdown-menu {
+  padding: 10px !important;
+  border: none !important;
+  margin: 10px 30px !important;
+}
+
+/*------------- Styles for block add Contact ------------------- */
+.saveNumberBlock {
+  position: absolute;
+  z-index: 99;
+  top: 70px;
+  right: 10px;
+  padding: 12px;
+  display: none;
+  /*border: 1px solid #adb5bd;*/
+  background: #e0e1dd;
+  border-radius: 5px;
+}
+
+.saveNumberBlock > .saveDisplay {
+  padding: 7px;
+  display: block;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  background: #e9ecef;
+}
+
+.saveNumberBlock > .saveDisplay:focus {
+  border: none;
+  outline: none;
+}
+
+.saveNumberBlock > .saveDisplay::placeholder {
+  color: #adb5bd;
+}
+
+.saveNumberBlock > button {
+  border: none;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.saveNumberBlock > .saveNumber {
+  margin-top: 10px;
+  /*display: block;*/
+  position: relative;
+  width: 50%;
+}
+
+.saveNumberBlock > .cancelNumber {
+  position: relative;
+  width: 48%;
+}
+
+/* ------------- Styles for Contacts Page ---------------- */
+.contact_page .contacts {
+  height: 70vh;
+  overflow-y: auto;
+  padding: 20px;
+  background: #e9ecef;
+  position: relative;
+}
+
+.contact_page .contact_wrapper {
+  margin-top: 10px;
+  background: #dee2e6;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.contact_page .icon_user i {
+  width: 40px;
+  height: 40px;
+  background: #f8961e;
+  color: #d6cfcb;
+  font-size: 23px;
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.contact_page .contact_name {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact_page .user_name {
+  margin-left: 12px !important;
+  font-size: 18px;
+}
+
+.contact_page .contact_phone {
+  padding: 1px ;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.contact_page .contact_phone span {
+  padding: 5px 20px;
+  border-radius: 20px;
+  background: #ced4da;
+}
+
+.contact_page .deleteContact {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+
+.contact_page .deleteContact:hover {
+  color: red !important;
+}
+
+/*----------- Styles for Modal buffer --------------------------- */
+.modal-buffer {
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  border-radius: 20px;
+  position: absolute;
+  background: #cad2c5;
+  width: max-content;
+}
+
+.modal-buffer > .modal-buffer-text {
+  padding: 0px !important;
+}
+
+/*------------Styles for Calling item at main page--------------- */
+
+.client-number {
+  display: flex;
+  //padding-left: 20px;
+  //padding-right: 20px;
+}
+
+.client-number .fa-plus {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.call_page .form-control {
+  border-radius: 0px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #adb5bd;
+}
+
+#call_block .list-group-item-success {
+  height: 100%;
+  background: linear-gradient(70deg, #a9d6e5, #b7e4c7, #61a5c2);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+#call_block .list-group-item-success .pull-left {
+  width: 100%;
+  height: 300px;
+  margin-top: 100px;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  align-items: center;
+  text-align: center;
+}
+
+#call_block .list-group-item-success .pull-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  gap: 20px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+
+#call_block .list-group-item-success .pull-right button {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  border-radius: 50% !important;
+  font-size: 25px;
+}
+
+#call_block .list-group-item-success .number-phone {
+  font-size: 30px;
+  color: #333;
+}
+
+#call_block .list-group-item-success .time-call {
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-group > .btn {
+  flex: none !important;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* --------Styles for items which was ended call and moved to Last page--------- */
+.last_call_page .list-group-item-danger {
+  margin-top: 10px;
+  background: #dee2e6;
+  padding: 10px 20px !important;
+}
+
+.last_call_page .list-group-item-danger:hover {
+  background: #d4d9de;
+  cursor: pointer;
+}
+
+.last_call_page .list-group-item-danger .pull-left {
+  /*height: 0px;*/
+}
+
+.last_call_page .list-group-item-danger p {
+  //margin-left: 10px !important;
+  padding: 0px !important;
+  color: #333;
+}
+
+.last_call_page .list-group-item-danger .number-phone {
+  font-size: 17px;
+}
+
+.last_call_page .list-group-item-danger .time-call {
+  /*padding: 5px !important;*/
+  padding: 5px 10px !important;
+  font-size: 14px;
+  color: #ffffff;
+  background: #95d5b2;
+  border-radius: 10px;
+}
+
+
+
+#call_block .list-group-item {
+  border: none;
+}
+
+
+.input-group-btn {
+  font-size: 14px;
+}
+
+/* ----------Styles for last_call_page-----------  */
+
+.panel {
+  border: none;
+  -webkit-box-shadow: none;
+}
+
+.navigation {
+   display: flex;
+   justify-content: center;
+   background: #ECEDED;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+.navigation > .nav-tabs > li {
+  cursor: pointer;
+  padding: 20px;
+}
+
+.last_call_page .default-text {
+  padding-top: 100px !important;
+}
+
+.list-group-item {
+  border: none !important;
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ced4da;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.panel-heading > h6 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last_call_page .time-call {
+  width: fit-content;
+}
+
+
+/*------------ Styles for small view port------------- */
+@media (max-width: 350px) {
+
+  #phoneUI {
+    padding: 0px;
+  }
+
+  .sipStatus {
+    display: flex;
+    justify-content: space-between;
+
+    #txtCallStatus {
+      order: 1;
+    }
+
+    #txtRegStatus {
+      order: 0;
+    }
+  }
+
+  .panel-heading > h6 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #sipClient #sip-logitems {
+    padding: 7px;
+  }
+
+  #sip-dialpad {
+    margin-top: 50px;
+  }
+
+  #sipClient .digit,
+  .volume,
+  .deleteNum,
+  .btnCall {
+    width: 59px;
+    height: 59px;
+    cursor: pointer;
+  }
+
+  .btn-call {
+    position: relative;
+    top: -20px;
+  }
+
+  #numDisplay {
+    //padding: 20px;
+    padding: 0px;
+  }
+
+  #sipClient #sip-dialpad {
+    padding: 12px 32px;
+    margin-top: 10px;
+  }
+
+  #sipClient .sipStatus {
+    //padding: 0px 25px;
+  }
+
+  .client-number .fa-plus {
+    padding-top: 10px;
+  }
+
+  .saveNumberBlock {
+    top: 50px;
+  }
+
+  .modal-buffer {
+    width: max-content;
+  }
+
+  .last_call_page .list-group-item-danger .number-phone {
+    font-size: 14px;
+  }
+
+  .last_call_page .list-group-item-danger .time-call {
+    font-size: 12px;
+  }
+
+  .contact_page .contacts {
+    padding: 7px;
+    padding-right: 18px;
+  }
+
+}
+
+@media (min-width: 415px) {
+  .dropdown-menu {
+    inset: 0px -150px auto auto !important;
+  }
+}
